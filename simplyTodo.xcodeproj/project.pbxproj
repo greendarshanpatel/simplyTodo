@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F202F59E1FE82CFC003C2A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */; };
-		F202F5A01FE82CFC003C2A52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202F59F1FE82CFC003C2A52 /* ViewController.swift */; };
 		F202F5A31FE82CFC003C2A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A11FE82CFC003C2A52 /* Main.storyboard */; };
 		F202F5A61FE82CFC003C2A52 /* simplyTodo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F202F5A41FE82CFC003C2A52 /* simplyTodo.xcdatamodeld */; };
 		F202F5A81FE82CFC003C2A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A71FE82CFC003C2A52 /* Assets.xcassets */; };
 		F202F5AB1FE82CFC003C2A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */; };
+		F202F5B31FE964E5003C2A52 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F202F59A1FE82CFC003C2A52 /* simplyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simplyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F202F59F1FE82CFC003C2A52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F202F5A21FE82CFC003C2A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F202F5A51FE82CFC003C2A52 /* simplyTodo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = simplyTodo.xcdatamodel; sourceTree = "<group>"; };
 		F202F5A71FE82CFC003C2A52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F202F5AA1FE82CFC003C2A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F202F5AC1FE82CFC003C2A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		F202F59C1FE82CFC003C2A52 /* simplyTodo */ = {
 			isa = PBXGroup;
 			children = (
+				F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */,
 				F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */,
-				F202F59F1FE82CFC003C2A52 /* ViewController.swift */,
 				F202F5A11FE82CFC003C2A52 /* Main.storyboard */,
 				F202F5A71FE82CFC003C2A52 /* Assets.xcassets */,
 				F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F202F5A61FE82CFC003C2A52 /* simplyTodo.xcdatamodeld in Sources */,
-				F202F5A01FE82CFC003C2A52 /* ViewController.swift in Sources */,
+				F202F5B31FE964E5003C2A52 /* MainTableViewController.swift in Sources */,
 				F202F59E1FE82CFC003C2A52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
