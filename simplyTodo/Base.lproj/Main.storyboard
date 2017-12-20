@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89187142379204776" green="1" blue="0.98919196843549417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="mainCell" id="DMF-wJ-Zld">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" id="DMF-wJ-Zld">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DMF-wJ-Zld" id="2Du-o6-Whz">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.99413279248901032" blue="0.97860013239744403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +33,13 @@
                             <outlet property="delegate" destination="Wbo-9J-Rb2" id="lRY-Kb-U6V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9eS-Vx-qkW"/>
+                    <navigationItem key="navigationItem" id="9eS-Vx-qkW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mFY-ju-4Lc">
+                            <connections>
+                                <action selector="addNewItem:" destination="Wbo-9J-Rb2" id="KkJ-Ef-9XI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wel-Kh-70I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
