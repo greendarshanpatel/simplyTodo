@@ -65,6 +65,7 @@ class MainTableViewController: UITableViewController {
             // what will happnd when user clicks the button
             print("action this is")
             self.mainArray.append(textField.text!)
+            self.tableView.reloadData()
         }
         alert.addTextField { (alertTextfiled) in
             alertTextfiled.placeholder = "add new simplyTodo"
