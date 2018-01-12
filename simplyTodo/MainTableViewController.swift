@@ -64,7 +64,7 @@ class MainTableViewController: UITableViewController {
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
             // what will happnd when user clicks the button
             print("action this is")
-            
+            self.mainArray.append(textField.text!)
         }
         alert.addTextField { (alertTextfiled) in
             alertTextfiled.placeholder = "add new simplyTodo"
