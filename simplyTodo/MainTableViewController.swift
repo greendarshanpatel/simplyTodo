@@ -59,11 +59,18 @@ class MainTableViewController: UITableViewController {
 
     //MARK- new item
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
         let alert = UIAlertController(title: "Add new item!", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
+            // what will happnd when user clicks the button
             print("action this is")
             
         }
+        alert.addTextField { (alertTextfiled) in
+            alertTextfiled.placeholder = "add new simplyTodo"
+            textField = alertTextfiled
+        }
+         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
         
