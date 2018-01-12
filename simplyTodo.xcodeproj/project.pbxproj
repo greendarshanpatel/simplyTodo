@@ -58,12 +58,11 @@
 		F202F59C1FE82CFC003C2A52 /* simplyTodo */ = {
 			isa = PBXGroup;
 			children = (
-				F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */,
+				F25825F92009361D004A00C8 /* controllers */,
 				F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */,
 				F25825F8200935F6004A00C8 /* dataModel */,
-				F202F5A11FE82CFC003C2A52 /* Main.storyboard */,
-				F202F5A71FE82CFC003C2A52 /* Assets.xcassets */,
-				F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */,
+				F25825FA20093634004A00C8 /* views */,
+				F25825FB2009364E004A00C8 /* supportingFile */,
 				F202F5AC1FE82CFC003C2A52 /* Info.plist */,
 				F202F5A41FE82CFC003C2A52 /* simplyTodo.xcdatamodeld */,
 			);
@@ -76,6 +75,31 @@
 				F25825F5200935A1004A00C8 /* model.swift */,
 			);
 			path = dataModel;
+			sourceTree = "<group>";
+		};
+		F25825F92009361D004A00C8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		F25825FA20093634004A00C8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F202F5A11FE82CFC003C2A52 /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F25825FB2009364E004A00C8 /* supportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				F202F5A71FE82CFC003C2A52 /* Assets.xcassets */,
+				F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */,
+			);
+			path = supportingFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
