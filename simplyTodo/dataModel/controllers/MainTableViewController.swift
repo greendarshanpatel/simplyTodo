@@ -64,10 +64,11 @@ class MainTableViewController: UITableViewController {
         
         
         if mainArray[indexPath.row].done == false {
-            mainArray[indexPath.row].done == true
+            mainArray[indexPath.row].done = true
         }else{
-            mainArray[indexPath.row].done == false
+            mainArray[indexPath.row].done = false
         }
+        tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
