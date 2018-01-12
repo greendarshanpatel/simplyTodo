@@ -9,15 +9,24 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-    var mainArray = ["akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag"]
+    var mainArray = [item]()
+    
+    //"akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let newItem = item()
+        newItem.title = "akjnaksjcbn"
+        mainArray.append(newItem)
+        
+        let newItem2 = item()
+        newItem2.title = "akjnaksjcbn2"
+        mainArray.append(newItem2)
+        
+        let newItem3 = item()
+        newItem3.title = "akjnaksjcbn3"
+        mainArray.append(newItem3)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,17 +50,23 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
       
-        cell.textLabel?.text = mainArray[indexPath.row]
+        cell.textLabel?.text = mainArray[indexPath.row].title
+        if mainArray[indexPath.row].done == true {
+            cell.accessoryType = .checkmark
+        }
+        else{
+            cell.accessoryType = .none
+        }
 
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        if mainArray[indexPath.row].done == false {
+            mainArray[indexPath.row].done == true
         }else{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            mainArray[indexPath.row].done == false
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -64,7 +79,10 @@ class MainTableViewController: UITableViewController {
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
             // what will happnd when user clicks the button
             print("action this is")
-            self.mainArray.append(textField.text!)
+            let newItem = item()
+            newItem.title = textField.text!
+            self.mainArray.append(newItem)
+           
             self.tableView.reloadData()
         }
         alert.addTextField { (alertTextfiled) in

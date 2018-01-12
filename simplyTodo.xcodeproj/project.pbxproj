@@ -13,7 +13,7 @@
 		F202F5A81FE82CFC003C2A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A71FE82CFC003C2A52 /* Assets.xcassets */; };
 		F202F5AB1FE82CFC003C2A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */; };
 		F202F5B31FE964E5003C2A52 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */; };
-		F25825F6200935A1004A00C8 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25825F5200935A1004A00C8 /* model.swift */; };
+		F25825F6200935A1004A00C8 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25825F5200935A1004A00C8 /* item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		F202F5AA1FE82CFC003C2A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F202F5AC1FE82CFC003C2A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		F25825F5200935A1004A00C8 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		F25825F5200935A1004A00C8 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,6 @@
 		F202F59C1FE82CFC003C2A52 /* simplyTodo */ = {
 			isa = PBXGroup;
 			children = (
-				F25825F92009361D004A00C8 /* controllers */,
 				F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */,
 				F25825F8200935F6004A00C8 /* dataModel */,
 				F25825FA20093634004A00C8 /* views */,
@@ -72,7 +71,8 @@
 		F25825F8200935F6004A00C8 /* dataModel */ = {
 			isa = PBXGroup;
 			children = (
-				F25825F5200935A1004A00C8 /* model.swift */,
+				F25825F5200935A1004A00C8 /* item.swift */,
+				F25825F92009361D004A00C8 /* controllers */,
 			);
 			path = dataModel;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F202F5A61FE82CFC003C2A52 /* simplyTodo.xcdatamodeld in Sources */,
-				F25825F6200935A1004A00C8 /* model.swift in Sources */,
+				F25825F6200935A1004A00C8 /* item.swift in Sources */,
 				F202F5B31FE964E5003C2A52 /* MainTableViewController.swift in Sources */,
 				F202F59E1FE82CFC003C2A52 /* AppDelegate.swift in Sources */,
 			);
