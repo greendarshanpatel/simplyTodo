@@ -7,34 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class MainTableViewController: UITableViewController {
     var mainArray = [Item]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     
-    //"akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print((UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+       
         
-
-        let newItem = Item()
-        newItem.title = "akjnaksjcbn"
-        mainArray.append(newItem)
         
-        let newItem2 = Item()
-        newItem2.title = "akjnaksjcbn2"
-        mainArray.append(newItem2)
-        
-        let newItem3 = Item()
-        newItem3.title = "akjnaksjcbn3"
-        mainArray.append(newItem3)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
 
     // MARK: - Table view data source
 
@@ -76,11 +65,14 @@ class MainTableViewController: UITableViewController {
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
             // what will happnd when user clicks the button
             print("action this is")
+            
             let newItem = Item(context: self.context)
             newItem.title = textField.text!
+            newItem.done = false
             self.mainArray.append(newItem)
            
             self.tableView.reloadData()
+            self.saveItem()
         }
         alert.addTextField { (alertTextfiled) in
             alertTextfiled.placeholder = "add new simplyTodo"
@@ -99,6 +91,16 @@ class MainTableViewController: UITableViewController {
             try context.save()
         }catch{
             print("error")
+        }
+    }
+    
+    //Mark: reading from coredata
+    func fatchData(){
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            try context.fetch(request)}
+        catch{
+            print("error = ",error)
         }
     }
     
