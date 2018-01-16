@@ -59,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F202F59D1FE82CFC003C2A52 /* AppDelegate.swift */,
+				F25825F92009361D004A00C8 /* controllers */,
 				F25825F8200935F6004A00C8 /* dataModel */,
 				F25825FA20093634004A00C8 /* views */,
 				F25825FB2009364E004A00C8 /* supportingFile */,
@@ -72,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				F25825F5200935A1004A00C8 /* item.swift */,
-				F25825F92009361D004A00C8 /* controllers */,
 			);
 			path = dataModel;
 			sourceTree = "<group>";
