@@ -74,7 +74,8 @@ class MainTableViewController: UITableViewController {
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
             // what will happnd when user clicks the button
             print("action this is")
-            let newItem = item()
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let newItem = Item(context: context)
             newItem.title = textField.text!
             self.mainArray.append(newItem)
            
