@@ -9,22 +9,24 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-    var mainArray = [item]()
+    var mainArray = [Item]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     //"akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag","akjnaksjcbn","zjcbjkzhcjkh","nvczhxgcjhag"
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
-        let newItem = item()
+        let newItem = Item()
         newItem.title = "akjnaksjcbn"
         mainArray.append(newItem)
         
-        let newItem2 = item()
+        let newItem2 = Item()
         newItem2.title = "akjnaksjcbn2"
         mainArray.append(newItem2)
         
-        let newItem3 = item()
+        let newItem3 = Item()
         newItem3.title = "akjnaksjcbn3"
         mainArray.append(newItem3)
     }
@@ -74,8 +76,7 @@ class MainTableViewController: UITableViewController {
         let action = UIAlertAction(title: "add item", style: .default) { (action) in
             // what will happnd when user clicks the button
             print("action this is")
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let newItem = Item(context: context)
+            let newItem = Item(context: self.context)
             newItem.title = textField.text!
             self.mainArray.append(newItem)
            
@@ -90,6 +91,17 @@ class MainTableViewController: UITableViewController {
         
         
     }
+    
+    
+    // Mark: save items
+    func saveItem(){
+        do{
+            try context.save()
+        }catch{
+            print("error")
+        }
+    }
+    
     
 
 }
