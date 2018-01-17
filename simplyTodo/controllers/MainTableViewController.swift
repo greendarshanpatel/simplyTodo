@@ -17,9 +17,9 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print((UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
        
-        
+        fatchData()
+        print(mainArray)
         
     }
 
@@ -98,7 +98,7 @@ class MainTableViewController: UITableViewController {
     func fatchData(){
         let request : NSFetchRequest<Item> = Item.fetchRequest()
         do {
-            try context.fetch(request)}
+         mainArray = try context.fetch(request)}
         catch{
             print("error = ",error)
         }
