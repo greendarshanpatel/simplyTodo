@@ -12,7 +12,7 @@
 		F202F5A61FE82CFC003C2A52 /* simplyTodo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F202F5A41FE82CFC003C2A52 /* simplyTodo.xcdatamodeld */; };
 		F202F5AB1FE82CFC003C2A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */; };
 		F202F5B31FE964E5003C2A52 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */; };
-		F21B7D18200FC7680087DB20 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = F21B7D17200FC7680087DB20 /* AppIcon.appiconset */; };
+		F25AF67F201104E300706346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25AF67E201104E200706346 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		F202F5AA1FE82CFC003C2A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F202F5AC1FE82CFC003C2A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F202F5B21FE964E5003C2A52 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		F21B7D17200FC7680087DB20 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
+		F25AF67E201104E200706346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = supportingFile/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 				F25825FA20093634004A00C8 /* views */,
 				F25825FB2009364E004A00C8 /* supportingFile */,
 				F202F5AC1FE82CFC003C2A52 /* Info.plist */,
+				F25AF67E201104E200706346 /* Assets.xcassets */,
 			);
 			path = simplyTodo;
 			sourceTree = "<group>";
@@ -93,7 +94,6 @@
 		F25825FB2009364E004A00C8 /* supportingFile */ = {
 			isa = PBXGroup;
 			children = (
-				F21B7D17200FC7680087DB20 /* AppIcon.appiconset */,
 				F202F5A91FE82CFC003C2A52 /* LaunchScreen.storyboard */,
 			);
 			path = supportingFile;
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F202F5AB1FE82CFC003C2A52 /* LaunchScreen.storyboard in Resources */,
-				F21B7D18200FC7680087DB20 /* AppIcon.appiconset in Resources */,
+				F25AF67F201104E300706346 /* Assets.xcassets in Resources */,
 				F202F5A31FE82CFC003C2A52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
