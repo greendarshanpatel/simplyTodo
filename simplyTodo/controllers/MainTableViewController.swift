@@ -17,7 +17,6 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         fatchData()
         print(mainArray)
         
