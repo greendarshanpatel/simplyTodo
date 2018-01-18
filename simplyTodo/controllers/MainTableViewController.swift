@@ -50,8 +50,10 @@ class MainTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = mainArray[indexPath.row]
-        item.done = !item.done
-        
+       // item.done = !item.done
+        mainArray.remove(at: indexPath.row)
+        context.delete(mainArray[indexPath.row])
+        saveItem()
        
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
