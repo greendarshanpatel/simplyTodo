@@ -94,6 +94,7 @@ class MainTableViewController: UITableViewController {
         }catch{
             print("error")
         }
+        self.tableView.reloadData()
     }
     
     //Mark: reading from coredata
