@@ -117,3 +117,24 @@ class MainTableViewController: UITableViewController {
     
 
 }
+
+extension MainTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: " title CONTAINS[cd] %@", searchBar.text!)
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        loadItems(with: request)
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
